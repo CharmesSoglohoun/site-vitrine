@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Charte : bleu nuit (sérieux, institutions) + ocre (chaleur, origine béninoise) sur fond crème */
+:root {
+  --fond: #faf7f2;
+  --doux: #f1ebe1;
+  --carte: #ffffff;
+  --trait: #e2d9cb;
+  --encre: #1a2133;
+  --gris: #5a6274;
+  --nuit: #1f2a44;
+  --sur-nuit: #faf7f2;
+  --ocre: #b5611f;
+  --ocre-doux: #f6e6d6;
+  --sur-ocre: #ffffff;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #11151f;
+    --doux: #181e2b;
+    --carte: #1c2333;
+    --trait: #2c3548;
+    --encre: #eef0f5;
+    --gris: #a8b0c0;
+    --nuit: #c9d4f0;
+    --sur-nuit: #11151f;
+    --ocre: #e8944f;
+    --ocre-doux: #3a2617;
+    --sur-ocre: #1a0f06;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-fond: var(--fond);
+  --color-doux: var(--doux);
+  --color-carte: var(--carte);
+  --color-trait: var(--trait);
+  --color-encre: var(--encre);
+  --color-gris: var(--gris);
+  --color-nuit: var(--nuit);
+  --color-sur-nuit: var(--sur-nuit);
+  --color-ocre: var(--ocre);
+  --color-ocre-doux: var(--ocre-doux);
+  --color-sur-ocre: var(--sur-ocre);
+  --font-sans: var(--font-inter);
+  --font-titre: var(--font-fraunces);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fond);
+  color: var(--encre);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-fraunces);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 font-semibold transition disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-ocre {
+  @apply btn bg-ocre text-sur-ocre hover:brightness-95;
+}
+@utility btn-ligne {
+  @apply btn border border-trait bg-carte text-encre hover:bg-doux;
+}
+@utility champ {
+  @apply min-h-12 w-full rounded-xl border border-trait bg-carte px-4 text-encre placeholder:text-gris focus:border-nuit;
+}
+@utility etiquette {
+  @apply mb-1.5 block text-sm font-semibold;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ocre);
+  outline-offset: 2px;
+}
