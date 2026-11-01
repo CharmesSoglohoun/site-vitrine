@@ -4,8 +4,8 @@ export const metadata: Metadata = { title: "Mentions légales" };
 
 export default function MentionsLegales() {
   return (
-    <article className="mx-auto flex max-w-3xl flex-col gap-5 px-5 py-14 leading-relaxed [&_h2]:mt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-nuit">
-      <h1 className="text-4xl font-semibold text-nuit">Mentions légales</h1>
+    <article className="mx-auto flex max-w-3xl flex-col gap-5 px-5 py-14 leading-relaxed [&_h2]:mt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-encre">
+      <h1 className="text-4xl font-semibold text-encre">Mentions légales</h1>
 
       <h2>Éditeur du site</h2>
       <p>Charmes Soglohoun, Cesson-Sévigné (Ille-et-Vilaine). Contact : via le formulaire du site ou LinkedIn.</p>

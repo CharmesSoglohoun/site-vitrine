@@ -11,7 +11,7 @@ export function FormulaireContact() {
   if (etat.statut === "envoye") {
     return (
       <div role="status" className="flex flex-col gap-2">
-        <h3 className="text-2xl font-semibold text-nuit">Merci, votre message est bien parti.</h3>
+        <h3 className="text-2xl font-semibold text-encre">Merci, votre message est bien parti.</h3>
         <p className="text-gris">Je vous réponds sous 48 heures, à l&apos;adresse que vous avez indiquée.</p>
       </div>
     );
